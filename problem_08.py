@@ -2,7 +2,8 @@
 # Find and fix the error
 
 def is_palindrome(text):
-    return text == text[::-1]
+    normalized = text.lower()
+    return normalized == normalized[::-1]
 
 word = "Racecar"
 if is_palindrome(word):
