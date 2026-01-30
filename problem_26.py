@@ -2,9 +2,10 @@
 # Find and fix the error
 
 def add_item(lst, item):
-    lst = lst + [item]
+    lst.append(item)
     return lst
 
-my_list = [1, 2, 3]
-add_item(my_list, 4)
-print(f"List after adding: {my_list}")
+if __name__ == "__main__":
+    my_list = [1, 2, 3]
+    add_item(my_list, 4)
+    print(f"List after adding: {my_list}")
