@@ -1,6 +1,5 @@
 # Problem 75: Check if parentheses are balanced
 # Find and fix the error
-
 def are_balanced(expression):
     stack = []
     pairs = {')': '(', '}': '{', ']': '['}
@@ -13,7 +12,7 @@ def are_balanced(expression):
                 return False
             stack.pop()
     
-    return len(stack) == 0
+    return not stack  # cleaner check
 
 expr = "((a + b) * [c - d])"
 print(f"Balanced: {are_balanced(expr)}")
