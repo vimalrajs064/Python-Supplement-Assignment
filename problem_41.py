@@ -3,8 +3,10 @@
 
 numbers = [10, 20, 30, 40, 50]
 search = 30
-index = -1
-for i in range(len(numbers)):
-    if numbers[i] == search:
-        index = i
+
+try:
+    index = numbers.index(search)
+except ValueError:
+    index = -1
+
 print(f"Index of {search}: {index}")

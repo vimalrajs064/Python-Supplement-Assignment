@@ -1,12 +1,10 @@
 # Problem 60: Check if number is Armstrong number
 # Find and fix the error
-
 def is_armstrong(n):
-    num_str = str(n)
-    num_digits = len(num_str)
-    total = 0
-    for digit in num_str:
-        total += int(digit) ** num_digits
+    num_digits = len(str(n))
+    total = sum(int(digit) ** num_digits for digit in str(n))
     return total == n
 
 print(f"Is 153 Armstrong? {is_armstrong(153)}")
+print(f"Is 9474 Armstrong? {is_armstrong(9474)}")
+print(f"Is 123 Armstrong? {is_armstrong(123)}")

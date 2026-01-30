@@ -2,10 +2,10 @@
 # Find and fix the error
 
 def is_all_digits(text):
-    for char in text:
-        if not char.isdigit():
+    for char in text:           # Check each character
+        if not char.isdigit():  # If any non-digit found
             return False
-    return True
+    return True                 # All digits passed
 
 test_str = "12345"
-print(f"Is all digits: {is_all_digits(test_str)}")
+print(f"Is all digits: {is_all_digits(test_str)}")  # True

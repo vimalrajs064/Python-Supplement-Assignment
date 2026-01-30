@@ -1,16 +1,16 @@
 # Problem 64: Merge two sorted lists
 # Find and fix the error
-
 def merge_sorted(list1, list2):
     merged = []
     i, j = 0, 0
     while i < len(list1) and j < len(list2):
-        if list1[i] < list2[j]:
+        if list1[i] <= list2[j]:   # use <= to keep stable ordering
             merged.append(list1[i])
             i += 1
         else:
             merged.append(list2[j])
             j += 1
+    # add remaining elements
     merged.extend(list1[i:])
     merged.extend(list2[j:])
     return merged

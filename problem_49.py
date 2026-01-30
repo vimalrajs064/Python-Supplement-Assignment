@@ -8,4 +8,4 @@ def find_divisors(n):
             divisors.append(i)
     return divisors
 
-print(f"Divisors of 24: {find_divisors(24)}")
+print(f"Divisors of 24: {find_divisors(24)}")   

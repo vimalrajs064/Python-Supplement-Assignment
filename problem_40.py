@@ -2,7 +2,7 @@
 # Find and fix the error
 
 def count_consonants(text):
-    vowels = "aeiouAEIOU"
+    vowels = set("aeiouAEIOU")  # use a set for faster lookup
     count = 0
     for char in text:
         if char.isalpha() and char not in vowels:
